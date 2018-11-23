@@ -9,7 +9,7 @@ class passwordCracker:
 
 	def __init__(self):
 		#set up gene
-		self.geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890"
+		self.geneSet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?.1234567890-,"
 
 	#generate a random string from the genes set
 	def generateParent(self, length ):
@@ -31,7 +31,7 @@ class passwordCracker:
 		
 
 crack = passwordCracker()
-target = "Hello Wolrd! 89"
+target = "I am Daniel. I am Sam. Sam I am. That Sam-I-am. That Sam-I-am!. I do not like. That Sam-I-am. Do you like. Green eggs and ham. I do not like them. Sam-I-am. I do not like Green eggs and ham. Would you like them Here or there? I would not like them Here or there. I would not like them Anywhere. I do not like Green eggs and ham. I do not like them, Sam-I-am Would you like them In a house? Would you like them With a mouse? I do not like them In a house. I do not like them With a mouse. I do not like them Here or there. I do not like them Anywhere. I do not like green eggs and ham. I do not like them, Sam-I-am. Would you eat them In a box? Would you eat them With a fox?"
 rand.seed()
 
 bestParent = crack.generateParent(len(target))
@@ -47,4 +47,4 @@ while True:
 		break
 	bestFitness = childFitness
 	bestParent = child
-	
+
